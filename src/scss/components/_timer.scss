@@ -1,0 +1,42 @@
+.timer {
+  display: flex;
+  justify-content: center;
+
+  // #days,
+  // #hours,
+  // #minutes,
+  // #seconds {
+  //   h1 {
+  //     font-size: 60px;
+  //   }
+  // }
+
+  #days,
+  #hours,
+  #minutes,
+  #seconds {
+    border-left: 0.5px solid $white_20;
+    border-right: 0.5px solid $white_20;
+    padding: 0 30px;
+    
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 1.23;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 15px;
+  }
+}
