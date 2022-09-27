@@ -9,7 +9,6 @@ const CommitteeItem = ({ imgUrl, name, descr, location }) => {
 
   return (
     <div className="committeeItem">
-      {/* <img src={imgUrl} alt="" /> */}
       <div className="profile-photo" style={profilePhotoStyle}></div>
       <h3 className="name">{name}</h3>
       <p className="descr">{descr}</p>

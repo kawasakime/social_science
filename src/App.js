@@ -1,17 +1,36 @@
+import React, { createContext, useEffect } from "react";
+
 import Committee from "./components/Committee";
+import Contacts from "./components/Contants/Contacts";
+import Deadline from "./components/Deadline";
 import Header from "./components/Header";
 import Info from "./components/Info";
+import PastConferences from "./components/PastConferences";
+import Requirements from "./components/Requirements";
 import Sections from "./components/Sections";
+import YMap from "./components/Contants/YMap";
+import BurgerMenu from "./components/BurgerMenu";
 
 import "./scss/app.scss";
+export const BurgerContext = createContext();
 
 function App() {
+  const [burgerIsOpen, setBurgerIsOpen] = React.useState(false);
   return (
     <div className="App">
-      <Header />
+      <BurgerContext.Provider value={{ burgerIsOpen, setBurgerIsOpen }}>
+        <BurgerMenu />
+        <Header />
+      </BurgerContext.Provider>
       <Info />
       <Committee />
       <Sections />
+      <Deadline />
+      <Requirements />
+      <PastConferences />
+      <Contacts>
+        <YMap />
+      </Contacts>
     </div>
   );
 }

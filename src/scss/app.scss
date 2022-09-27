@@ -2,11 +2,34 @@
 @import "./variables";
 @import "./components/all";
 
+@mixin _600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin _800 {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
 @mixin title {
   text-align: center;
   font-size: 36px;
   text-transform: uppercase;
   margin-bottom: 100px;
+
+  @include _600 {
+    font-size: 28px
+  };
+}
+
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -17,6 +40,10 @@ body {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+section {
+  padding: 50px 0;
 }
 
 .header {
@@ -97,18 +124,12 @@ body {
     line-height: 1.5;
 
     span {
-      color: $black_50;
-    }
-
-    span.bold {
-      font-weight: 400;
-      color: $black;
+      color: $red;
     }
   }
 }
 
 #committee {
-  padding: 50px 0;
   .wrapper {
     h1 {
       @include title;
@@ -125,12 +146,8 @@ body {
 }
 
 #sections {
-  padding: 50px 0;
-
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column-center();
   }
 
   h1 {
@@ -146,14 +163,19 @@ body {
 
     h2 {
       line-height: 1.35;
+
+      @include _800() {
+        font-size: 20px
+      }
     }
 
     .designation {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flex-column-center();
       grid-column: 2/3;
-      height: 150px;
+      min-height: 150px;
+      @include _800() {
+        height: 100%;
+      }
 
       .number {
         min-height: 50px;
@@ -174,6 +196,132 @@ body {
         background: $red;
       }
     }
+  }
+}
 
+#deadline {
+  .wrapper {
+    @include flex-column-center();
+    h1 {
+      @include title;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      .calendar {
+        min-width: 20px;
+        max-width: 80px;
+        fill: $red;
+      }
+
+      .left-side {
+        margin-left: 20px;
+        max-width: 600px;
+        margin-bottom: 50px;
+        h4 {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        p {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 1.55;
+          a {
+            color: $red;
+          }
+          span.bold {
+            font-weight: 600;
+          }
+          span.red {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+#requirements {
+  .wrapper {
+    padding: 0 12vw;
+    font-size: 18px;
+    font-weight: 300;
+
+    h1 {
+      @include title();
+    }
+    p {
+      line-height: 1.55;
+    }
+
+    .theses {
+      margin-top: 100px;
+      ol > li {
+        margin-bottom: 20px;
+      }
+      ul {
+        margin-top: 20px;
+        margin-left: 20px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+#past-conferences {
+  h1 {
+    @include title();
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    .conference-item {
+      display: flex;
+      align-items: flex-start;
+      .number {
+        font-size: 22px;
+        font-weight: 600;
+        min-height: 50px;
+        min-width: 50px;
+        background: $black_10;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+      }
+      .content {
+        margin-left: 20px;
+        h2 {
+          margin-bottom: 20px;
+        }
+        p {
+          letter-spacing: 1.5px;
+          font-weight: 300;
+          color: $red;
+          text-transform: uppercase;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+}
+
+#contacts {
+  text-align: center;
+  h1 {
+    @include title()
+  }
+  p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.7;
+    a {
+      color: $red;
+    }
   }
 }

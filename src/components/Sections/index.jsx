@@ -1,8 +1,8 @@
 import React from "react";
 import SectionsDesignationItem from "./SectionsDesignationItem";
-import Button from "./UI/Button";
+import Button from "../UI/Button";
 
-import file from '../assets/SOCIAL_SCIENCE.pdf'
+import file from "../../assets/SOCIAL_SCIENCE.pdf";
 
 const sections = [
   "Стратегии развития общества и экономики в новой реальности",
@@ -15,16 +15,16 @@ const sections = [
 const titleColumn = (i) => {
   return {
     gridColumn: i % 2 === 0 ? `1/2` : `3/4`,
-    gridRow: `${i+1}/${i+2}`,
-    textAlign: i % 2 === 0 ? 'right' : 'left'
-  }
-}
+    gridRow: `${i + 1}/${i + 2}`,
+    textAlign: i % 2 === 0 ? "right" : "left",
+  };
+};
 
 const designationRow = (i) => {
   return {
-    gridRow: `${i+1}/${i+2}`
-  }
-}
+    gridRow: `${i + 1}/${i + 2}`,
+  };
+};
 
 const Sections = () => {
   return (
@@ -34,14 +34,20 @@ const Sections = () => {
         <div className="sections__block">
           {sections.map((item, i) => {
             return (
-              <>
-                <h2 style={titleColumn(i)}>{item}</h2>
-                <SectionsDesignationItem style={designationRow(i)} number={i+1} last={i === sections.length-1 ? true : false}/>
-              </>
+              <React.Fragment key={i}>
+                <h2 style={titleColumn(i)}>
+                  {item}
+                </h2>
+                <SectionsDesignationItem
+                  style={designationRow(i)}
+                  number={i + 1}
+                  last={i === sections.length - 1 ? true : false}
+                />
+              </React.Fragment>
             );
           })}
         </div>
-        <Button link={file} text='Информационное письмо'/>
+        <Button link={file} text="Информационное письмо" />
       </div>
     </section>
   );

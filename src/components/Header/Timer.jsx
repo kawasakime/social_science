@@ -5,7 +5,6 @@ const Timer = ({ endtime }) => {
   const [time, setTime] = React.useState(getTimeRemaining(deadline));
 
   React.useEffect(() => {
-    console.log(time);
     const initializeClock = setInterval(() => {
       setTime(getTimeRemaining(deadline));
     }, 1000);
@@ -13,7 +12,7 @@ const Timer = ({ endtime }) => {
     if (time.total <= 0) {
       clearInterval(initializeClock);
     }
-  }, []);
+  }, []); //eslint-disable-line
 
   function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date());
