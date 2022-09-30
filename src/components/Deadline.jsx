@@ -19,18 +19,20 @@ const Deadline = () => {
             <h4>до 10 октября 2022 года</h4>
             <p>
               Выслать научную статью (требования по оформлению в Информационном
-              письме) для включения в сборник конференции (
-              <b>РИНЦ</b>) и пройти онлайн
-              регистрацию&nbsp;
-              <a href="https://forum.ui.ranepa.ru/crt2022" target="blank">
-                https://forum.ui.ranepa.ru/crt2022
+              письме) для включения в сборник конференции (<b>РИНЦ</b>) и пройти
+              онлайн&nbsp;
+              <a href="https://forms.gle/SFaoJRiU1CS4Ni2h9" target="blank">
+                регистрацию
               </a>
               &nbsp; Материалы можно отправить на почту{" "}
               <span className="red">udolgashova@uriu.ranepa.ru</span>
             </p>
           </div>
         </div>
-        <Button link={"https://forms.gle/SFaoJRiU1CS4Ni2h9"} text={"Регистрация"}/>
+        <Button
+          link={"https://forms.gle/SFaoJRiU1CS4Ni2h9"}
+          text={"Регистрация"}
+        />
       </div>
     </section>
   );
