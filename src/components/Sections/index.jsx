@@ -30,7 +30,7 @@ const Sections = () => {
   return (
     <section id="sections">
       <div className="wrapper">
-        <h1>Секции симпозиума</h1>
+        <h1>Секции Конференции</h1>
         <div className="sections__block">
           {sections.map((item, i) => {
             return (

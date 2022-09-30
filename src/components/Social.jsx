@@ -3,7 +3,7 @@ import React from "react";
 const Social = (props) => {
   return (
     <div className="social">
-      <a href="https://vk.com/science_ui.ranepa">
+      <a href="https://vk.com/science_ui.ranepa" target="blank">
         <svg
           width="30px"
           height="30px"
@@ -20,7 +20,7 @@ const Social = (props) => {
           ></path>
         </svg>
       </a>
-      <a href="https://www.youtube.com/channel/UCXzYdYvRbDJCW6KWu9qlU2Q">
+      <a href="https://www.youtube.com/channel/UCXzYdYvRbDJCW6KWu9qlU2Q" target="blank">
         <svg
           width="30px"
           height="30px"
@@ -37,7 +37,7 @@ const Social = (props) => {
           ></path>
         </svg>
       </a>
-      <a href="https://t.me/science_uiu_ranepa">
+      <a href="https://t.me/science_uiu_ranepa" target="blank">
         <svg
           width="30px"
           height="30px"

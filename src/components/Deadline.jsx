@@ -22,7 +22,7 @@ const Deadline = () => {
               письме) для включения в сборник конференции (
               <b>РИНЦ</b>) и пройти онлайн
               регистрацию&nbsp;
-              <a href="https://forum.ui.ranepa.ru/crt2022">
+              <a href="https://forum.ui.ranepa.ru/crt2022" target="blank">
                 https://forum.ui.ranepa.ru/crt2022
               </a>
               &nbsp; Материалы можно отправить на почту{" "}

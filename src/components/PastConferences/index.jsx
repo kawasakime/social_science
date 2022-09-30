@@ -1,38 +1,45 @@
 import React from "react";
 import ConferenceItem from "./ConferenceItem";
 
-const conferences = [
-  {
-    year: 2019,
-    title:
-      "Сборник трудов по итогам международной научно-практическая конференции «Social Science (Общественные науки)» (27 сентября 2019 г.)",
-  },
-  {
-    year: 2020,
-    title:
-      "Сборник трудов по итогам II международной научно-практическая конференции «Social Science (Общественные науки)» (19, 20 ноября 2020 г.)",
-  },
-  {
-    year: 2021,
-    title:
-      "Сборник трудов III международной научно-практической конференции «SOCIAL SCIENCE (общественные науки)",
-  },
-];
+import conference_2019 from "../../assets/2019.pdf";
+import conference_2020 from "../../assets/2020.pdf";
+import conference_2021 from "../../assets/2021.pdf";
+import Accordion from "./Accordion";
+
+import { conferences, conferencesInfo } from "../../data/conferences";
 
 const PastConferences = () => {
   return (
     <section id="past-conferences">
       <div className="wrapper">
         <h1>Сборники прошлых конференций</h1>
-        <div className="container">
-          {conferences.map((item, i) => (
-            <ConferenceItem
-              key={i}
-              year={item.year}
-              title={item.title}
-              number={i + 1}
-            />
+        <div className="info">
+          <div className="photos">
+            {[...Array(5)].map((_, i) => (
+              <img
+                key={i}
+                className={`photo-${i + 1}`}
+                src={`./assets/img/conferences/${i + 1}.jpg`}
+                alt=""
+              />
+            ))}
+          </div>
+          {conferencesInfo.map((item) => (
+            <Accordion title={item.title} text={item.text} />
           ))}
+        </div>
+        <div className="container">
+          {conferences(conference_2019, conference_2020, conference_2021).map(
+            (item, i) => (
+              <ConferenceItem
+                key={i}
+                year={item.year}
+                title={item.title}
+                number={i + 1}
+                link={item.link}
+              />
+            )
+          )}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { committeeList } from "../../utils/committeeList";
+import { committeeList } from "../../data/committeeList";
 import CommitteeItem from "./CommitteeItem";
 
 const Committee = () => {
@@ -12,7 +12,7 @@ const Committee = () => {
           {committeeList.map((item, i) => (
             <CommitteeItem
               key={i}
-              imgUrl={`../assets/img/committee/${i + 1}.jpg`}
+              imgUrl={`./assets/img/committee/${i + 1}.jpg`}
               name={item.name}
               descr={item.descr}
               location={item.location}

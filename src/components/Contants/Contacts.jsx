@@ -8,7 +8,7 @@ const Contacts = ({children}) => {
       <p>
         <b>Адрес:</b> г. Ростов-на-Дону, ул. Пушкинская, д. 70/54
         <br />
-        <b>Сайт:</b> <a href="http://uriu.ranepa.ru/">http://uriu.ranepa.ru/</a>{" "}
+        <b>Сайт:</b> <a href="http://uriu.ranepa.ru/" target="blank">http://uriu.ranepa.ru/</a>{" "}
       </p>
       {children}
     </section>

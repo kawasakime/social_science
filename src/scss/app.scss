@@ -55,7 +55,6 @@ section {
     justify-content: space-evenly;
     @include _800() {
       height: 60vh;
-      padding: 10px;
     }
 
     & > * {
@@ -80,17 +79,17 @@ section {
       font-size: 50px;
       padding-top: 50px;
       font-size: calc(24px + 26 * (100vw / 1280));
-      // @include _800(){
-      //   font-size: 35px;
-      // }
       @include _600() {
         padding-top: 25px;
       }
-  
     }
     h2.title {
       font-size: calc(16px + 10 * (100vw / 1280));
       letter-spacing: 2.5px;
+    }
+    h1.title, h2.title {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
@@ -164,11 +163,11 @@ section {
       line-height: 1.35;
 
       @include _800() {
-        font-size: 20px
+        font-size: 20px;
       }
 
       @include _600() {
-        font-size: 15px
+        font-size: 15px;
       }
     }
 
@@ -298,6 +297,61 @@ section {
   h1 {
     @include title();
   }
+  .info {
+    margin-bottom: 100px;
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto;
+      gap: 20px;
+      place-items: center;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+      }
+
+      .photo-1 {
+        grid-column: 1/3;
+      }
+      .photo-2 {
+        grid-column: 3/5;
+      }
+      .photo-3 {
+        grid-column: 5/7;
+      }
+      .photo-4 {
+        grid-column: 1/4;
+      }
+      .photo-5 {
+        grid-column: 4/7;
+      }
+
+      @include _800() {
+        grid-template-columns: 1fr 1fr;
+        .photo-2 {
+          display: none;
+        }
+        .photo-1 {
+          grid-column: 1/2;
+        }
+        .photo-3 {
+          grid-column: 2/3;
+        }
+        .photo-4 {
+          grid-column: 1/3;
+        }
+        .photo-5 {
+          grid-column: 1/3;
+        }
+      }
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -321,12 +375,18 @@ section {
         h2 {
           margin-bottom: 20px;
         }
-        p {
+        a {
+          text-decoration: none;
           letter-spacing: 1.5px;
           font-weight: 300;
           color: $red;
           text-transform: uppercase;
           line-height: 1.7;
+          @include _600() {
+            font-size: 15px;
+            letter-spacing: 1.2px;
+            line-height: 1.4;
+          }
         }
       }
     }
@@ -336,7 +396,7 @@ section {
 #contacts {
   text-align: center;
   h1 {
-    @include title()
+    @include title();
   }
   p {
     padding: 0 15px;
