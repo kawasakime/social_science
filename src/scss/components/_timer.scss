@@ -1,15 +1,8 @@
+@import "../mixins";
+
 .timer {
   display: flex;
   justify-content: center;
-
-  // #days,
-  // #hours,
-  // #minutes,
-  // #seconds {
-  //   h1 {
-  //     font-size: 60px;
-  //   }
-  // }
 
   #days,
   #hours,
@@ -18,7 +11,11 @@
     border-left: 0.5px solid $white_20;
     border-right: 0.5px solid $white_20;
     padding: 0 30px;
-    
+
+    @include _600() {
+      padding: 0 15px;
+    }
+
     &:first-child {
       padding-left: 0;
       border-left: none;
@@ -30,13 +27,16 @@
   }
 
   h1 {
-    font-size: 64px;
     line-height: 1.23;
+    font-size: calc(25px + 41 * (100vw / 1280));
   }
 
   p {
     text-transform: uppercase;
     font-weight: 300;
     margin-top: 15px;
+    @include _600() {
+      margin-top: 5px;
+    }
   }
 }

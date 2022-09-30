@@ -38,16 +38,13 @@ const BurgerMenu = ({ ref }) => {
   ];
 
   return (
-    <div
-      className={`burger-menu${burgerIsOpen ? " active" : undefined}`}
-      ref={ref}
-    >
+    <div className={`burger-menu${burgerIsOpen ? " active" : undefined}`} ref={ref}>
       <div className="bg"></div>
       <div className="burger-menu__panel">
         <div className="close" onClick={handleClickCloseBurgerBtn}></div>
         <ul>
-          {list.map((item) => (
-            <li>
+          {list.map((item, i) => (
+            <li key={i} onClick={handleClickCloseBurgerBtn}>
               <a href={item.link}>{item.title}</a>
             </li>
           ))}
