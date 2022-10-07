@@ -21,11 +21,11 @@ const BurgerMenu = ({ ref }) => {
     },
     {
       link: "#sections",
-      title: "Секции симпозиума",
+      title: "Секции конференции",
     },
     {
       link: "#committee",
-      title: "Программный комитет",
+      title: "Наши спикеры",
     },
     {
       link: "#requirements",

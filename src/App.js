@@ -1,4 +1,4 @@
-import React, { createContext, useEffect } from "react";
+import React, { createContext } from "react";
 
 import Committee from "./components/Committee";
 import Contacts from "./components/Contants/Contacts";

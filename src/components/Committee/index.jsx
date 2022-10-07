@@ -7,12 +7,12 @@ const Committee = () => {
   return (
     <section id="committee">
       <div className="wrapper">
-        <h1>Программный комитет симпозиума</h1>
+        <h1>Наши спикеры</h1>
         <div className="committee-list">
           {committeeList.map((item, i) => (
             <CommitteeItem
               key={i}
-              imgUrl={`./assets/img/committee/${i + 1}.jpg`}
+              imgUrl={`./assets/img/committee/${item.img}`}
               name={item.name}
               descr={item.descr}
               location={item.location}

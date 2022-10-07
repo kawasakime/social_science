@@ -3,7 +3,7 @@ import React from "react";
 const Social = (props) => {
   return (
     <div className="social">
-      <a href="https://vk.com/science_ui.ranepa" target="blank">
+      {/* <a href="https://vk.com/science_ui.ranepa" target="blank">
         <svg
           width="30px"
           height="30px"
@@ -53,7 +53,7 @@ const Social = (props) => {
             fill="#921a1d"
           ></path>
         </svg>
-      </a>
+      </a> */}
     </div>
   );
 };

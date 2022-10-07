@@ -39,7 +39,7 @@ const Sections = () => {
                 <h2 style={titleColumn(i)}>{item}</h2>
                 <SectionsDesignationItem
                   style={designationRow(i)}
-                  number={i + 1}
+                  number={i === 0 ? "Пленарное заседание" : i}
                   last={i === sections.length - 1 ? true : false}
                 />
               </React.Fragment>

@@ -23,7 +23,7 @@ const Header = (props) => {
           <span></span>
         </div>
         <img src="./assets/img/logo.png" alt="" className="logo" />
-        <Social />
+        {/* <Social /> */}
       </div>
       <main className="header__main">
         <div className="header__main-bg"></div>
