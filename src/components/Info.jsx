@@ -36,7 +36,7 @@ const Info = () => {
           <li>
             <a href="https://www.garant.ru/info/infopartner/" target="blank">
               <b>«EUrASEAN: журнал о глобальной социально-экономической динамике»</b>
-              {<br />}
+              {<br />}{<br />}
               Региональный представитель в ВУЗах ООО <b>«Гарант-Сервис-Ростов»</b>
             </a>
           </li>
