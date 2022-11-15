@@ -5,7 +5,7 @@ import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 const Gallery = () => {
   const [active, setActive] = React.useState(0);
 
-  const emptyArray = [...Array(11)]
+  const emptyArray = [...Array(41)]
 
   return (
     <section id="gallery">
@@ -14,6 +14,7 @@ const Gallery = () => {
         <div className="container">
           {emptyArray.map((_, i) => (
             <img
+            key={i}
               className={active === i ? "active" : undefined}
               src={`./assets/img/gallery/${i + 1}.webp`}
               alt=""

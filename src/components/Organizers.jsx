@@ -36,7 +36,7 @@ const Organizers = () => {
         <h1>Соорганизаторы</h1>
         <div className="so-organizers__container">
           {organizers.map((item, i) => (
-            <div className="so-organizers__item">
+            <div key={i} className="so-organizers__item">
               <img src={`./assets/img/so-organizers/${i + 1}.png`} alt="" />
               <p>{item.title}</p>
               <span>{item.location}</span>

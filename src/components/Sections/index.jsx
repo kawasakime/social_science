@@ -70,8 +70,8 @@ const Sections = () => {
         </div>
         {/* <Button link={file} text="Информационное письмо" /> */}
         <div className="info">
-          {conferencesInfo.map((item) => (
-            <Accordion title={item.title} text={item.text} />
+          {conferencesInfo.map((item, i) => (
+            <Accordion key={i} title={item.title} text={item.text} />
           ))}
         </div>
       </div>
