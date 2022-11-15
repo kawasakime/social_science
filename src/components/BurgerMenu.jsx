@@ -12,16 +12,16 @@ const BurgerMenu = ({ ref }) => {
 
   const list = [
     {
-      link: "https://forms.gle/SFaoJRiU1CS4Ni2h9",
-      title: "Регистрация",
+      link: "",
+      title: "Регистрация (будет доступна в августе 2023 года)",
     },
-    {
-      link: file,
-      title: "Информационное письмо",
-    },
+    // {
+    //   link: file,
+    //   title: "Информационное письмо",
+    // },
     {
       link: "#sections",
-      title: "Секции конференции",
+      title: "История конференции",
     },
     {
       link: "#committee",

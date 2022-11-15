@@ -1,6 +1,7 @@
-@import '../variables';
+@import "../variables";
 
 .accordion {
+  width: 100%;
   margin-bottom: 20px;
   &__button {
     position: relative;

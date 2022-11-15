@@ -36,19 +36,19 @@ const Timer = ({ endtime }) => {
   return (
     <div className="timer">
       <div id="days">
-        <h1>{numberFormatting(time.days)}</h1>
+        <h1>{time.days < 0 ? "00" : numberFormatting(time.days)}</h1>
         <p>Дней</p>
       </div>
       <div id="hours">
-        <h1>{numberFormatting(time.hours)}</h1>
+        <h1>{time.hours < 0 ? "00" : numberFormatting(time.hours)}</h1>
         <p>Часов</p>
       </div>
       <div id="minutes">
-        <h1>{numberFormatting(time.minutes)}</h1>
+        <h1>{time.minutes < 0 ? "00" : numberFormatting(time.minutes)}</h1>
         <p>Минут</p>
       </div>
       <div id="seconds">
-        <h1>{numberFormatting(time.seconds)}</h1>
+        <h1>{time.seconds < 0 ? "00" : numberFormatting(time.seconds)}</h1>
         <p>Секунд</p>
       </div>
     </div>

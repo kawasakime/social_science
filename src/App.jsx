@@ -12,6 +12,7 @@ import YMap from "./components/Contants/YMap";
 import BurgerMenu from "./components/BurgerMenu";
 
 import "./scss/app.scss";
+import Gallery from "./components/Gallery";
 export const BurgerContext = createContext();
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Deadline />
       <Requirements />
       <PastConferences />
+      <Gallery />
       <Contacts>
         <YMap />
       </Contacts>
