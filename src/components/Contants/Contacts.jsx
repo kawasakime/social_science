@@ -18,7 +18,7 @@ const Contacts = ({ children }) => {
           <b>Контактное лицо</b> – Долгашова Юлия Олеговна
         </p>
         <p>
-          <b>E-mail:</b> <span>udolgashova@uriu.ranepa.ru</span> <br />{" "}
+          <b>E-mail:</b> <span>dolgashova-yo@ranepa.ru</span> <br />{" "}
           <b>тел.:</b> (863) 203-64-44, <b>каб</b> 812
           <br />
           <b>Адрес:</b> г. Ростов-на-Дону, ул. Пушкинская, д. 70/54
