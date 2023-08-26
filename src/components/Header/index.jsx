@@ -33,7 +33,7 @@ const Header = (props) => {
         </h2>
         <Timer endtime={"2023-10-26T10:00:00"} />
         <Button
-          link={"https://forms.gle/SFaoJRiU1CS4Ni2h9"}
+          link={"https://forms.gle/EQTon9hE3r77wKxE6"}
           text={"Регистрация"}
         />
       </main>

@@ -36,8 +36,7 @@ const Deadline = () => {
             </p>
           </div>
         </div>
-        <Button link={"https://forms.gle/SFaoJRiU1CS4Ni2h9"} text={"Регистрация"} />
-        <h3>Регистрация будет доступна в августе 2023 года</h3>
+        <Button link={"https://forms.gle/EQTon9hE3r77wKxE6"} text={"Регистрация"} />
       </div>
     </section>
   );
