@@ -180,6 +180,8 @@ section {
 
   .so-organizers {
     &__container {
+      max-width: 800px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       justify-items: center;
@@ -466,6 +468,7 @@ section {
 }
 
 #contacts {
+  position: relative;
   text-align: center;
   // max-width: 1000px;
   margin: 0 auto;
@@ -482,6 +485,19 @@ section {
     }
     a {
       color: $red;
+    }
+  }
+
+  .oferta {
+    color: $red;
+    transition: opacity .4s;
+
+    &:visited {
+      color: $red;
+    }
+
+    &:hover {
+      opacity: 0.6;
     }
   }
 }

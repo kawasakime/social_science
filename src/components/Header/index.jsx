@@ -31,7 +31,7 @@ const Header = (props) => {
           <br />
           «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»
         </h2>
-        <Timer endtime={"2023-10-26T10:00:00"} />
+        <Timer endtime={"2024-10-17T10:00:00"} />
         <Button
           link={"https://forms.gle/EQTon9hE3r77wKxE6"}
           text={"Регистрация"}

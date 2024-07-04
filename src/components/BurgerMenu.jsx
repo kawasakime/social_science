@@ -25,7 +25,7 @@ const BurgerMenu = ({ ref }) => {
     },
     {
       link: "#committee",
-      title: "Наши спикеры",
+      title: "Программный комитет",
     },
     {
       link: "#requirements",

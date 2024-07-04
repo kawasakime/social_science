@@ -1,5 +1,7 @@
 import React from "react";
 
+import Oferta from '../../assets/Приказ_02-97-169 от 18.04.2022 Оферта.pdf'
+
 const Contacts = ({ children }) => {
   return (
     <section id="contacts">
@@ -25,6 +27,7 @@ const Contacts = ({ children }) => {
         </p>
       </div>
       {children}
+      <a className="oferta" download href={Oferta}>Публичная оферта</a>
     </section>
   );
 };
