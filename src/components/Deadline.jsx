@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./UI/Button";
 
 import QR from "../assets/img/qr.gif";
+import { REGISTRATION_LINK } from "../constants";
 
 const Deadline = () => {
   return (
@@ -19,7 +20,7 @@ const Deadline = () => {
               Выслать тезисы (требования по оформлению в Информационном письме) для включения в сборник конференции (
               <b>РИНЦ</b>). Материалы можно отправить на почту <span className="red">dolgashova-yo@ranepa.ru</span>{" "}
               регистрация будет доступна по ссылке{" "}
-              <a style={{whiteSpace: "nowrap"}} href="https://forms.yandex.ru/u/6683c6ee068ff015bdb488fd/">https://forms.yandex.ru/u/6683c6ee068ff015bdb488fd/</a>.
+              <a style={{whiteSpace: "nowrap"}} href={REGISTRATION_LINK}>{REGISTRATION_LINK}</a>.
               <br />
               <img src={QR} alt="QR" style={{ width: "50%" }} />
             </p>
@@ -33,7 +34,7 @@ const Deadline = () => {
             </p>
           </div>
         </div>
-        <Button link={"https://forms.gle/EQTon9hE3r77wKxE6"} text={"Регистрация"} />
+        <Button link={REGISTRATION_LINK} text={"Регистрация"} />
       </div>
     </section>
   );

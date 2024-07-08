@@ -29,7 +29,7 @@ const BurgerMenu = ({ ref }) => {
     },
     {
       link: "#requirements",
-      title: "Требования к оформлению тезисов",
+      title: "Требования к оформлению материалов конференции",
     },
     {
       link: "#contacts",

@@ -2,6 +2,7 @@ import React from "react";
 import Timer from "./Timer";
 import Button from "../UI/Button";
 import { BurgerContext } from "../../App";
+import { REGISTRATION_LINK } from "../../constants";
 
 const Header = (props) => {
   const burgerRef = React.useRef();
@@ -25,15 +26,15 @@ const Header = (props) => {
       </div>
       <main className="header__main">
         <div className="header__main-bg"></div>
-        <h1 className="title">«SOCIAL SCIENCE» (Общественные науки)</h1>
+        <h1 className="title">«SOCIAL SCIENCE (Общественные науки)»</h1>
         <h2 className="title">
-          V МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
+          VI МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
           <br />
           «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»
         </h2>
         <Timer endtime={"2024-10-17T10:00:00"} />
         <Button
-          link={"https://forms.gle/EQTon9hE3r77wKxE6"}
+          link={REGISTRATION_LINK}
           text={"Регистрация"}
         />
       </main>

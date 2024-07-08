@@ -411,6 +411,21 @@ section {
         }
       }
     }
+
+    .example-link {
+      color: $red;
+      display: block;
+      margin-top: 15px;
+      transition: opacity 0.3s;
+
+      &:visited {
+        color: $red;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
 

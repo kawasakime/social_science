@@ -34,9 +34,12 @@ const Info = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.garant.ru/info/infopartner/" target="blank">
+            <a href="https://open-resource.ru/journals/2-rus/76476-the-euraseans-journal-on-global-socio-economic-dynamics/" target="blank">
               <b>«EUrASEAN: журнал о глобальной социально-экономической динамике»</b>
-              {<br />}{<br />}
+            </a>
+          </li>
+          <li>
+            <a href="https://www.garant.ru/info/infopartner/">
               Региональный представитель в ВУЗах ООО <b>«Гарант-Сервис-Ростов»</b>
             </a>
           </li>
@@ -53,6 +56,7 @@ const Info = () => {
             «EUrASEAN: журнал о глобальной социально-экономической динамике»
           </b>
         </p> */}
+        <p style={{fontSize: 15, maxWidth: 600, margin: '0 auto'}}>По результатам рассмотрения материалов конференции программным комитетом лучшие статьи могут быть опубликованы в этих журналах</p>
       </div>
     </section>
   );
