@@ -1,5 +1,5 @@
 export const conferences = (...links) => {
-  const [link_1, link_2, link_3, link_4, link_5] = links;
+  const [link_1, link_2, link_3, link_4, link_5, link_6] = links;
   return [
     {
       year: 2019,
@@ -28,6 +28,11 @@ export const conferences = (...links) => {
       year: 2023,
       title: 'СБОРНИК ТРУДОВ V МЕЖДУНАРОДНОЙ НАУЧНО-ПРАКТИЧЕСКОЙ КОНФЕРЕНЦИИ «SOCIAL SCIENCE (ОБЩЕСТВЕННЫЕ НАУКИ)»',
       link: link_5
+    },
+    {
+      year: 2024,
+      title: 'СБОРНИК ТРУДОВ VI МЕЖДУНАРОДНОЙ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «SOCIAL SCIENCE»: (Общественные науки)',
+      link: link_6
     }
   ];
 };
