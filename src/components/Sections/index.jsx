@@ -8,6 +8,10 @@ import Accordion from "../PastConferences/Accordion";
 
 const sections = [
   {
+    year: "2024",
+    title: "VI МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «SOCIAL SCIENCE»: (Общественные науки)"
+  },
+  {
     year: "2023",
     title: 
       "V МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «SOCIAL SCIENCE» (Общественные науки) «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»"
