@@ -22,7 +22,10 @@ const Header = (props) => {
         >
           <span></span>
         </div>
-        <img src="./assets/img/logo.png" alt="" className="logo" />
+        <div className="logoContainer">
+          <img src="./assets/img/logo.png" alt="" className="logo" />
+          <img src="./assets/img/logo2.png" alt="" className="logo2" />
+        </div>
       </div>
       <main className="header__main">
         <div className="header__main-bg"></div>
