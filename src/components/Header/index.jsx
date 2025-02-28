@@ -29,9 +29,9 @@ const Header = (props) => {
       </div>
       <main className="header__main">
         <div className="header__main-bg"></div>
-        <h1 className="title">«SOCIAL SCIENCE (Общественные науки)»</h1>
+        <h1 className="title">Общественные науки: исследования и практики</h1>
         <h2 className="title">
-          VI МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
+          VII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
           <br />
           «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»
         </h2>

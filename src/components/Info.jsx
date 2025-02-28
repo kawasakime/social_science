@@ -5,7 +5,7 @@ const Info = () => {
   return (
     <section id="info">
       <div className="wrapper">
-        <h1>«SOCIAL SCIENCE» (Общественные науки)</h1>
+        <h1>Общественные науки: исследования и практики</h1>
         <p>
           <span>
             <b>Цель конференции:</b>
