@@ -7,7 +7,7 @@ const Committee = () => {
   return (
     <section id="committee">
       <div className="wrapper">
-        <h1>Программный комитет</h1>
+        <h1>Эксперты</h1>
         <div className="committee-list">
           {committeeList.map((item, i) => (
             <CommitteeItem
