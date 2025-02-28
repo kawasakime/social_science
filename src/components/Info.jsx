@@ -33,11 +33,11 @@ const Info = () => {
               <b>«Северо-Кавказский юридический вестник»</b>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://open-resource.ru/journals/2-rus/76476-the-euraseans-journal-on-global-socio-economic-dynamics/" target="blank">
               <b>«EUrASEAN: журнал о глобальной социально-экономической динамике»</b>
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="https://www.garant.ru/info/infopartner/">
               Региональный представитель в ВУЗах ООО <b>«Гарант-Сервис-Ростов»</b>
