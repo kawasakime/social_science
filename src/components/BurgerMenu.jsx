@@ -13,7 +13,7 @@ const BurgerMenu = ({ ref }) => {
   const list = [
     {
       link: "",
-      title: "Регистрация (будет доступна в августе 2023 года)",
+      title: "Регистрация",
     },
     // {
     //   link: file,
