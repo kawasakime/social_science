@@ -5,7 +5,7 @@ import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
 const Gallery = () => {
   const [active, setActive] = React.useState(0);
 
-  const emptyArray = [...Array(49)]
+  const emptyArray = [...Array(54)]
 
   return (
     <section id="gallery">
