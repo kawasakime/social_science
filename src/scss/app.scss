@@ -219,6 +219,40 @@ section {
   }
 }
 
+#program {
+  .wrapper {
+    h1 {
+      @include title;
+    }
+
+    p {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.5;
+      @include _800() {
+        font-size: 20px;
+      }
+      @include _600() {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      color: $red;
+      transition: opacity .4s;
+
+      &:visited {
+        color: $red;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
 #committee {
   .wrapper {
     h1 {

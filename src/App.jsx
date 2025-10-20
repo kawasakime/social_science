@@ -10,9 +10,11 @@ import Requirements from "./components/Requirements";
 import Sections from "./components/Sections";
 import YMap from "./components/Contants/YMap";
 import BurgerMenu from "./components/BurgerMenu";
+import Gallery from "./components/Gallery";
 
 import "./scss/app.scss";
-import Gallery from "./components/Gallery";
+import Program from "./components/Program";
+
 export const BurgerContext = createContext();
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Header />
       </BurgerContext.Provider>
       <Info />
+      <Program />
       <Committee />
       <Sections />
       <Deadline />
