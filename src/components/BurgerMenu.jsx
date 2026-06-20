@@ -1,7 +1,7 @@
 import React from "react";
 import { BurgerContext } from "../App";
 
-import file from "../assets/SOCIAL_SCIENCE.pdf";
+// import file from "../assets/SOCIAL_SCIENCE.pdf";
 
 const BurgerMenu = ({ ref }) => {
   const { burgerIsOpen, setBurgerIsOpen } = React.useContext(BurgerContext);

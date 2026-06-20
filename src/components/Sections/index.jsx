@@ -1,8 +1,8 @@
 import React from "react";
 import SectionsDesignationItem from "./SectionsDesignationItem";
-import Button from "../UI/Button";
+// import Button from "../UI/Button";
 
-import file from "../../assets/SOCIAL_SCIENCE.pdf";
+// import file from "../../assets/SOCIAL_SCIENCE.pdf";
 import { conferencesInfo } from "../../data/conferences";
 import Accordion from "../PastConferences/Accordion";
 
