@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 import Committee from "./components/Committee";
 import Contacts from "./components/Contants/Contacts";
@@ -17,8 +17,32 @@ import Program from "./components/Program";
 
 export const BurgerContext = createContext();
 
+const ACCESS_LOGIN = 'admin123@';
+
 function App() {
   const [burgerIsOpen, setBurgerIsOpen] = React.useState(false);
+
+  const [hasAccess, setHasAccess] = useState(false);
+
+  useEffect(() => {
+    if (hasAccess) {
+      return;
+    }
+
+    const login = window.prompt('Введите код доступа');
+
+    if (login === ACCESS_LOGIN) {
+      setHasAccess(true);
+      return;
+    }
+
+    window.alert('Неверный код доступа!');
+  }, [hasAccess]);
+
+  if (!hasAccess) {
+    return null;
+  }
+
   return (
     <div className="App">
       <BurgerContext.Provider value={{ burgerIsOpen, setBurgerIsOpen }}>
