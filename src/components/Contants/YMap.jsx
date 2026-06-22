@@ -1,15 +1,35 @@
 import React from "react";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const YMap = () => {
+  const mapStyle = {
+    width: "100%",
+    height: "450px",
+  };
+
+  const center = [47.2240712, 39.7130366, 17];
+
   return (
-    <section id="yandex-map">
-      <iframe
-        title="Карта"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=39.7030366%2C47.2140712%2C39.7230366%2C47.2340712&layer=mapnik&marker=47.2240712%2C39.7130366"
-        style={{ width: "100%", height: "450px", border: "none" }}
-        loading="lazy"
-      />
-    </section>
+    <YMaps>
+      <section id="yandex-map">
+        <Map
+          className="map"
+          defaultState={{ center: center, zoom: 16 }}
+          width={100}
+          // height={30}
+          style={mapStyle}
+        >
+          <Placemark
+            key={""}
+            geometry={center}
+            options={{
+              iconLayout: "default#image",
+              iconImageSize: [44, 50],
+            }}
+          />
+        </Map>
+      </section>
+    </YMaps>
   );
 };
 
