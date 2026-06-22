@@ -30,8 +30,8 @@ jobs:
           server: ${{ secrets.BEGET_FTP_HOST }}
           username: ${{ secrets.BEGET_FTP_USERNAME }}
           password: ${{ secrets.BEGET_FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           local-dir: ./build/
-          server-dir: /b59170dq.beget.tech/public_html/
+          server-dir: /public_html/
           dangerous-clean-slate: true
