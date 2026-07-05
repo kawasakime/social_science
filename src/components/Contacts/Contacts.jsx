@@ -17,10 +17,10 @@ const Contacts = ({ children }) => {
         <p>Научно-организационный отдел</p>
         <br />
         <p>
-          <b>Контактное лицо</b> – <b style={{fontWeight: 600}}>Долгашова Юлия Олеговна</b>
+          <b>Контактное лицо</b> – <b style={{fontWeight: 600}}>Войнова Анастасия Александровна</b>
         </p>
         <p>
-          <b>E-mail:</b> <span>dolgashova-yo@ranepa.ru</span> <br />{" "}
+          <b>E-mail:</b> <span>voynova-aa@ranepa.ru</span> <br />{" "}
           <b>тел.:</b> 8 (863) 270-07-44, <b>каб</b> 812
           <br />
           <b>Адрес:</b> г. Ростов-на-Дону, ул. Пушкинская, д. 70/54

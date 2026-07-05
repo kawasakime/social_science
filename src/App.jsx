@@ -1,14 +1,14 @@
 import React, { createContext } from "react";
 
 import Committee from "./components/Committee";
-import Contacts from "./components/Contants/Contacts";
+import Contacts from "./components/Contacts/Contacts";
 import Deadline from "./components/Deadline";
 import Header from "./components/Header";
 import Info from "./components/Info";
 import PastConferences from "./components/PastConferences";
 import Requirements from "./components/Requirements";
 import Sections from "./components/Sections";
-import YMap from "./components/Contants/YMap";
+import YMap from "./components/Contacts/YMap";
 import BurgerMenu from "./components/BurgerMenu";
 import Gallery from "./components/Gallery";
 

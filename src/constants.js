@@ -1,1 +1,1 @@
-export const REGISTRATION_LINK = 'https://forms.yandex.ru/u/6683c6ee068ff015bdb488fd/';
+export const REGISTRATION_LINK = 'https://forms.yandex.ru/cloud/6a4183269029020631e0253f';

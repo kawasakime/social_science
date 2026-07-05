@@ -31,11 +31,11 @@ const Header = (props) => {
         <div className="header__main-bg"></div>
         <h1 className="title">Общественные науки: исследования и практики</h1>
         <h2 className="title">
-          VII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
+          VIII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
           <br />
           «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»
         </h2>
-        <Timer endtime={"2025-10-16T10:00:00"} />
+        <Timer endtime={"2026-10-15T10:00:00"} />
         <Button
           link={REGISTRATION_LINK}
           text={"Регистрация"}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import example from "../assets/Образец оформления материалов конференции.docx";
+import example from "../assets/ТРЕБОВАНИЯ К ОФОРМЛЕНИЮ МАТЕРИАЛОВ.docx";
 
 const Requirements = () => {
   return (
