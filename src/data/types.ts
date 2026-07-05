@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type DocumentLink = string | string[];
 
 export interface Conference {
@@ -34,7 +36,7 @@ export interface Organizer {
 
 export interface KeyDate {
   title: string;
-  text: string;
+  text: string | ReactNode;
   registrationLink?: boolean;
   email?: string;
   qr?: boolean;
@@ -53,4 +55,5 @@ export interface GalleryImage {
 export interface NavigationItem {
   link: string;
   title: string;
+  external?: boolean;
 }

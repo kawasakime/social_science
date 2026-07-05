@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
 
+  @include _600() {
+    width: 100%;
+  }
+
   #days,
   #hours,
   #minutes,
@@ -13,7 +17,8 @@
     padding: 0 30px;
 
     @include _600() {
-      padding: 0 15px;
+      flex: 1;
+      padding: 0 8px;
     }
 
     &:first-child {
@@ -29,6 +34,10 @@
   h1 {
     line-height: 1.23;
     font-size: calc(25px + 41 * (100vw / 1280));
+
+    @include _600() {
+      font-size: 31px;
+    }
   }
 
   &__value {
@@ -69,6 +78,7 @@
     margin-top: 15px;
     @include _600() {
       margin-top: 5px;
+      font-size: 11px;
     }
   }
 }

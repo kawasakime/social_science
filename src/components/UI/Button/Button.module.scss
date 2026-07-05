@@ -2,22 +2,47 @@
 @import "../../../scss/mixins";
 
 .btn {
+  position: relative;
   text-decoration: none;
-  padding: 20px 40px;
+  min-height: 56px;
+  padding: 0 22px 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   background: $red;
   color: $white;
-  border-radius: 30px;
-  transition: .2s;
+  border-radius: 999px;
+  border: 0;
+  box-shadow: 0 14px 32px rgba($red, 0.23);
+  transition: transform .2s, box-shadow .2s, background .2s;
   align-self: center;
   margin: 20px 0;
   font-weight: 600;
+  line-height: 1;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 50%;
+    background: rgba($white, 0.16);
+    transition: transform .2s;
+  }
+
   @include _600 {
-    padding: 14px 30px;
+    min-height: 50px;
+    padding: 0 22px 0 24px;
     font-size: 15px;
   }
 }
 
 .btn:hover {
-  background: $light_red;
-  transform: scale(1.02);
+  background: #861717;
+  box-shadow: 0 18px 40px rgba($red, 0.3);
+  transform: translateY(-2px);
+
+  svg {
+    transform: translateX(3px);
+  }
 }

@@ -11,9 +11,9 @@ import Sections from "./components/Sections";
 import YMap from "./components/Contacts/YMap";
 import BurgerMenu from "./components/BurgerMenu";
 import Gallery from "./components/Gallery";
+import Program from "./components/Program";
 
 import "./scss/app.scss";
-import Program from "./components/Program";
 
 interface BurgerContextValue {
   burgerIsOpen: boolean;

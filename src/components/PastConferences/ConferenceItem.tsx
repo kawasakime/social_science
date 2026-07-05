@@ -10,23 +10,22 @@ interface Props {
 
 const ConferenceItem = ({ year, title, number, link }: Props) => {
   const linkIsString = typeof link === "string";
-
-  const href = linkIsString ? link : link[0];
-
-  const onClick = () => {
-    if (!linkIsString) {
-      link.slice(1).forEach((item) => window.open(item));
-    }
-  };
+  const links = linkIsString ? [link] : link;
 
   return (
     <div className="conference-item">
       <div className="number">{number}</div>
       <div className="content">
         <h2>{year}</h2>
-        <a href={href} onClick={onClick} target="_blank" rel="noopener noreferrer">
-          {title}
-        </a>
+        <p>{title}</p>
+        <div className="collection-links">
+          {links.map((href, index) => (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" download>
+              <span>PDF</span>
+              {links.length === 1 ? "Сборник материалов" : `Сборник материалов ${index + 1}`}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

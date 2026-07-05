@@ -5,8 +5,7 @@ import { BurgerContext } from "../../App";
 import { conference, REGISTRATION_LINK } from "../../data/site";
 
 const Header = () => {
-  const burgerRef = React.useRef<HTMLDivElement | null>(null);
-  const { setBurgerIsOpen } = React.useContext(BurgerContext);
+  const { burgerIsOpen, setBurgerIsOpen } = React.useContext(BurgerContext);
 
   function handleClickBurgerBtn() {
     setBurgerIsOpen(true);
@@ -15,13 +14,16 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__top">
-        <div
-          ref={burgerRef}
+        <button
+          type="button"
           className="burger-menu__button"
           onClick={handleClickBurgerBtn}
+          aria-label="Открыть меню"
+          aria-controls="site-navigation"
+          aria-expanded={burgerIsOpen}
         >
           <span></span>
-        </div>
+        </button>
         <div className="logoContainer">
           <img src="./assets/img/logo.png" alt="" className="logo" />
           <img src="./assets/img/logo2.png" alt="" className="logo2" />

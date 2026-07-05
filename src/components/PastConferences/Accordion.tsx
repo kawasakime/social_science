@@ -7,25 +7,26 @@ interface Props {
 
 const Accordion = ({ title, text }: Props) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const panelId = React.useId();
 
   function handlerClickAccordion() {
     setIsOpen((prev) => !prev);
   }
 
-  const panelStyle: React.CSSProperties = {
-    display: isOpen ? "block" : "none",
-  };
-
   return (
-    <div className="accordion">
+    <div className={`accordion${isOpen ? " active" : ""}`}>
       <button
-        className={`accordion__button${isOpen ? " active" : ""}`}
+        className="accordion__button"
         onClick={handlerClickAccordion}
+        aria-expanded={isOpen}
+        aria-controls={panelId}
       >
-        {title}
+        <span>{title}</span>
       </button>
-      <div className="accordion__panel" style={panelStyle}>
-        <p>{text}</p>
+      <div id={panelId} className="accordion__panel">
+        <div className="accordion__content">
+          <p>{text}</p>
+        </div>
       </div>
     </div>
   );

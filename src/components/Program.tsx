@@ -2,15 +2,18 @@ import { conference } from "../data/site";
 
 const Program = () => {
   return (
-    <section id='program'>
+    <section id="program">
       <div className="wrapper">
-        <h1>Программа конференции</h1>
-        <p>
-          С программой конференции можно ознакомиться{" "}
+        <div className="program-card">
+          <div>
+            <span className="program-card__label">PDF</span>
+            <h1>Программа конференции</h1>
+            <p>Актуальная программа конференции доступна для просмотра и скачивания.</p>
+          </div>
           <a target="_blank" rel="noopener noreferrer" href={conference.programFile}>
-            здесь
+            Открыть программу
           </a>
-        </p>
+        </div>
       </div>
     </section>
   );
