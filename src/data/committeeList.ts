@@ -1,4 +1,6 @@
-export const committeeList = [
+import type { CommitteeMember } from "./types";
+
+export const committeeList: CommitteeMember[] = [
   {
     name: "Аганбегян Абел Гезевич",
     descr: "академик РАН, доктор экономических наук",

@@ -1,6 +1,12 @@
 import React from "react";
 
-const SectionsDesignationItem = ({style, number, last}) => {
+interface Props {
+  style: React.CSSProperties;
+  number: string;
+  last: boolean;
+}
+
+const SectionsDesignationItem = ({ style, number, last }: Props) => {
   return (
     <div className="designation" style={style}>
       <div className="number">{number}</div>

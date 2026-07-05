@@ -8,8 +8,9 @@ import conference_2024 from '../assets/2024.pdf';
 import conference_2025_1 from '../assets/2025_1.pdf';
 import conference_2025_2 from '../assets/2025_2.pdf';
 import conference_2025_3 from '../assets/2025_3.pdf';
+import type { Conference } from "./types";
 
-export const conferences = [
+export const conferences: Conference[] = [
   {
     year: 2019,
     name: "I международная научно-практическая конференция «SOCIAL SCIENCE» (Общественные науки)",

@@ -144,6 +144,12 @@ section {
     }
   }
 
+  .publication-note {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
   h1 {
     text-transform: uppercase;
     color: $red;
@@ -405,6 +411,17 @@ section {
           a {
             color: $red;
           }
+
+          a.registration-link {
+            white-space: nowrap;
+          }
+
+          img {
+            width: 50%;
+            max-width: 260px;
+            margin-top: 15px;
+          }
+
           span.bold {
             font-weight: 600;
           }
@@ -432,6 +449,16 @@ section {
     }
     p {
       line-height: 1.55;
+    }
+
+    .requirements-list {
+      list-style-position: outside;
+      padding-left: 20px;
+      line-height: 1.55;
+
+      li {
+        margin-bottom: 12px;
+      }
     }
 
     .theses {
@@ -562,6 +589,10 @@ section {
       opacity: 0.6;
     }
   }
+
+  .contact-person {
+    font-weight: 600;
+  }
 }
 
 #gallery {
@@ -574,45 +605,133 @@ section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      // height: 90vh;
       width: 100%;
+      outline: none;
+
+      &:focus-visible {
+        outline: 2px solid rgba($red, 0.45);
+        outline-offset: 12px;
+      }
+
+      .gallery-viewer {
+        width: min(100%, 1040px);
+        height: min(68vh, 680px);
+        min-height: 360px;
+        display: grid;
+        place-items: center;
+        background: rgba($black, 0.03);
+        overflow: hidden;
+
+        &__image {
+          width: 100%;
+          height: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          transform-origin: center center;
+          animation: gallery-image-change 0.35s ease;
+        }
+
+        @include _600() {
+          height: 56vh;
+          min-height: 260px;
+        }
+      }
 
       .btns {
         margin-top: 20px;
-        & > * {
-          position: relative;
-          z-index: 2;
-          width: 30px;
-          height: auto;
-          margin: 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        button {
+          width: 44px;
+          height: 44px;
+          border: 1px solid rgba($red, 0.2);
+          border-radius: 50%;
+          background: $white;
+          color: $red;
           cursor: pointer;
-          transition: 0.2s;
+          display: grid;
+          place-items: center;
+          transition: transform 0.2s, border-color 0.2s;
 
           &:hover {
-            transform: scale(1.2);
+            transform: scale(1.08);
+            border-color: rgba($red, 0.6);
+          }
+
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+
+        span {
+          min-width: 70px;
+          text-align: center;
+          font-weight: 600;
+          color: $black;
+        }
+      }
+
+      .gallery-preview {
+        width: min(100%, 720px);
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+
+        button {
+          aspect-ratio: 16 / 10;
+          border: 2px solid transparent;
+          padding: 0;
+          background: rgba($black, 0.03);
+          cursor: pointer;
+          overflow: hidden;
+          opacity: 0.72;
+          transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+
+          &:hover,
+          &.active {
+            opacity: 1;
+            border-color: $red;
+          }
+
+          &.active {
+            transform: translateY(-2px);
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        @include _600() {
+          width: min(100%, 420px);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+
+          button:nth-child(1),
+          button:nth-child(5) {
+            display: none;
           }
         }
       }
-
-      img {
-        max-height: 70vh;
-        // min-height: 400px;
-        max-width: 95vw;
-        position: absolute;
-        transition: opacity 0.5s;
-        z-index: 1;
-        // visibility: hidden;
-        opacity: 0;
-        // display: none;
-        height: 100%;
-
-        &.active {
-          display: block;
-          position: relative;
-          visibility: visible;
-          opacity: 1;
-        }
-      }
     }
+  }
+}
+
+@keyframes gallery-image-change {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

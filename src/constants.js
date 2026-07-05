@@ -1,1 +1,0 @@
-export const REGISTRATION_LINK = 'https://forms.yandex.ru/cloud/6a4183269029020631e0253f';

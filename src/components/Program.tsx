@@ -1,5 +1,4 @@
-// import ProgramFile from '../assets/ПРОГРАММА_15.10.2025.pdf'
-
+import { conference } from "../data/site";
 
 const Program = () => {
   return (
@@ -8,7 +7,7 @@ const Program = () => {
         <h1>Программа конференции</h1>
         <p>
           С программой конференции можно ознакомиться{" "}
-          <a target="_blank" rel="noopener noreferrer" href={'/assets/ПРОГРАММА_15.10.2025.pdf'}>
+          <a target="_blank" rel="noopener noreferrer" href={conference.programFile}>
             здесь
           </a>
         </p>

@@ -31,12 +31,77 @@
     font-size: calc(25px + 41 * (100vw / 1280));
   }
 
+  &__value {
+    display: flex;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__digit {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 0.68em;
+    height: 1.08em;
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  &__digit-old,
+  &__digit-new {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  &__digit-old {
+    animation: timer-digit-out 0.36s ease forwards;
+  }
+
+  &__digit-new {
+    animation: timer-digit-in 0.36s ease forwards;
+  }
+
   p {
     text-transform: uppercase;
     font-weight: 300;
     margin-top: 15px;
     @include _600() {
       margin-top: 5px;
+    }
+  }
+}
+
+@keyframes timer-digit-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes timer-digit-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timer {
+    &__digit-old,
+    &__digit-new {
+      animation: none;
     }
   }
 }

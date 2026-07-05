@@ -2,10 +2,10 @@ import React from "react";
 import Timer from "./Timer";
 import Button from "../UI/Button";
 import { BurgerContext } from "../../App";
-import { REGISTRATION_LINK } from "../../constants";
+import { conference, REGISTRATION_LINK } from "../../data/site";
 
-const Header = (props) => {
-  const burgerRef = React.useRef();
+const Header = () => {
+  const burgerRef = React.useRef<HTMLDivElement | null>(null);
   const { setBurgerIsOpen } = React.useContext(BurgerContext);
 
   function handleClickBurgerBtn() {
@@ -29,17 +29,14 @@ const Header = (props) => {
       </div>
       <main className="header__main">
         <div className="header__main-bg"></div>
-        <h1 className="title">Общественные науки: исследования и практики</h1>
+        <h1 className="title">{conference.title}</h1>
         <h2 className="title">
-          VIII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
+          {conference.edition}
           <br />
-          «СТРАТЕГИИ РАЗВИТИЯ ОБЩЕСТВА И ЭКОНОМИКИ В НОВОЙ РЕАЛЬНОСТИ»
+          {conference.topic}
         </h2>
-        <Timer endtime={"2026-10-15T10:00:00"} />
-        <Button
-          link={REGISTRATION_LINK}
-          text={"Регистрация"}
-        />
+        <Timer endtime={conference.startsAt} />
+        <Button link={REGISTRATION_LINK} text="Регистрация" />
       </main>
     </header>
   );

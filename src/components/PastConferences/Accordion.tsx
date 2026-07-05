@@ -1,20 +1,27 @@
 import React from "react";
 
-const Accordion = ({ title, text }) => {
+interface Props {
+  title: string;
+  text: string;
+}
+
+const Accordion = ({ title, text }: Props) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  function handlerClickAccordion(e) {
-    e.target.classList.toggle("active");
+  function handlerClickAccordion() {
     setIsOpen((prev) => !prev);
   }
 
-  const panelStyle = {
+  const panelStyle: React.CSSProperties = {
     display: isOpen ? "block" : "none",
   };
 
   return (
     <div className="accordion">
-      <button className="accordion__button" onClick={handlerClickAccordion}>
+      <button
+        className={`accordion__button${isOpen ? " active" : ""}`}
+        onClick={handlerClickAccordion}
+      >
         {title}
       </button>
       <div className="accordion__panel" style={panelStyle}>

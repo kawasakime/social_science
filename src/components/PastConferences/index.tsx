@@ -12,7 +12,7 @@ const PastConferences = () => {
           {conferences.map(
             (item, i) => (
               <ConferenceItem
-                key={i}
+                key={item.year}
                 year={item.year}
                 title={item.collectionTitle}
                 number={i + 1}

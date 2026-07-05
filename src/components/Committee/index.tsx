@@ -9,9 +9,9 @@ const Committee = () => {
       <div className="wrapper">
         <h1>Эксперты</h1>
         <div className="committee-list">
-          {committeeList.map((item, i) => (
+          {committeeList.map((item) => (
             <CommitteeItem
-              key={i}
+              key={item.name}
               imgUrl={`./assets/img/committee/${item.img}`}
               name={item.name}
               descr={item.descr}

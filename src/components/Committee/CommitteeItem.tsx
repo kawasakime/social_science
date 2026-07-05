@@ -1,7 +1,14 @@
 import React from "react";
 
-const CommitteeItem = ({ imgUrl, name, descr, location }) => {
-  const profilePhotoStyle = {
+interface Props {
+  imgUrl: string;
+  name: string;
+  descr: string;
+  location: string;
+}
+
+const CommitteeItem = ({ imgUrl, name, descr, location }: Props) => {
+  const profilePhotoStyle: React.CSSProperties = {
     background: `url(${imgUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center 0"

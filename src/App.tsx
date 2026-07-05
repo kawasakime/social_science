@@ -15,7 +15,15 @@ import Gallery from "./components/Gallery";
 import "./scss/app.scss";
 import Program from "./components/Program";
 
-export const BurgerContext = createContext();
+interface BurgerContextValue {
+  burgerIsOpen: boolean;
+  setBurgerIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const BurgerContext = createContext<BurgerContextValue>({
+  burgerIsOpen: false,
+  setBurgerIsOpen: () => undefined,
+});
 
 function App() {
   const [burgerIsOpen, setBurgerIsOpen] = React.useState(false);
