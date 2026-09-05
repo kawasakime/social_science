@@ -37,4 +37,9 @@ export const coOrganizers: Organizer[] = [
     location: "(Республика Беларусь, г. Минск)",
     logo: "./assets/img/so-organizers/6.png",
   },
+  {
+    title: " Тюменский государственный университет",
+    location: "(г. Тюмень)",
+    logo: "./assets/img/so-organizers/7.jpg",
+  },
 ];
