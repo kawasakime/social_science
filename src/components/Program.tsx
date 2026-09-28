@@ -10,7 +10,8 @@ const Program = () => {
             <h1>Программа конференции</h1>
             <p>Актуальная программа конференции доступна для просмотра и скачивания.</p>
           </div>
-          <a target="_blank" rel="noopener noreferrer" href={conference.programFile}>
+          {/* <a target="_blank" rel="noopener noreferrer" href={conference.programFile}> */}
+          <a target="_blank" rel="noopener noreferrer" href={undefined}>
             Открыть программу
           </a>
         </div>

@@ -26,4 +26,9 @@ export const supportLinks: LinkItem[] = [
     title: "Региональный представитель в ВУЗах ООО",
     bold: "«Гарант-Сервис-Ростов»",
   },
+  {
+    href: "https://naukaru.ru/ru/nauka/journal/6a9c1dda32807fdbab8859fc/zhurnal-politicheskih-issledovaniy/view?section=about",
+    title: "Научный журнал",
+    bold: "«Журнал политических исследований»"
+  }
 ];
