@@ -1,4 +1,4 @@
-import { conference } from "../data/site";
+// import { conference } from "../data/site";
 
 const Program = () => {
   return (
@@ -11,7 +11,8 @@ const Program = () => {
             <p>Актуальная программа конференции доступна для просмотра и скачивания.</p>
           </div>
           {/* <a target="_blank" rel="noopener noreferrer" href={conference.programFile}> */}
-          <a target="_blank" rel="noopener noreferrer" href={undefined}>
+          {/* eslint-disable-next-line */}
+          <a rel="noopener noreferrer" href={undefined}>
             Открыть программу
           </a>
         </div>
