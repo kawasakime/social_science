@@ -12,23 +12,23 @@ export const info = {
 
 export const supportLinks: LinkItem[] = [
   {
-    href: "http://upravlenie.uriu.ranepa.ru/login?source=%2F",
+    href: "https://upravlenie-uriu.ranepa.ru/jour",
     title: "Научный и общественно-теоретический журнал",
-    bold: "«Государственное и муниципальное управление»",
+    bold: "«Государственное и муниципальное управление. Ученые записки»",
   },
   {
-    href: "http://vestnik.uriu.ranepa.ru/login?source=%2F",
+    href: "https://vestnik-uriu.ranepa.ru/jour",
     title: "Научно-практический журнал",
     bold: "«Северо-Кавказский юридический вестник»",
-  },
-  {
-    href: "https://www.garant.ru/info/infopartner/",
-    title: "Региональный представитель в ВУЗах ООО",
-    bold: "«Гарант-Сервис-Ростов»",
   },
   {
     href: "https://naukaru.ru/ru/nauka/journal/6a9c1dda32807fdbab8859fc/zhurnal-politicheskih-issledovaniy/view?section=about",
     title: "Научный журнал",
     bold: "«Журнал политических исследований»"
-  }
+  },
+  {
+    href: "https://elibrary.ru/contents.asp?titleid=69390",
+    title: "Научный журнал",
+    bold: "«The EUrASEANs: journal on global socio-economic dynamics»",
+  },
 ];
